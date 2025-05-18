@@ -1,10 +1,10 @@
 ### 自己训练一个BPE分词器
 ### 使用TinyStoriesV2-GPT4-train.txt(2.3G，最后也没用），TinyStoriesV2-GPT4-valid.txt(22M)训练vocab和merge规则
-按照assignment1指导
+按照assignment1指导，封装了一个Tokenizer类，一步步跑就是train_bpe_tokenizer_optimized.py，不加chunk优化是bpe_tokenize.py
 - ### Pre-tokenization
 use a regex-based pre-tokenizer (used by GPT-2)
 - ### Special tokens
-除了<|endoftext|>，我还添加了b'</w>'
+除了<|endoftext|>，我还添加了b'\</w\>'
 - ### Parallelizing pre-tokenization
 使用提供的pretokenization_example.py规则划分chunk，multiprocessing并行处理，并且remove special tokens before pre-tokenization
 - ### Optimizing the merging step
